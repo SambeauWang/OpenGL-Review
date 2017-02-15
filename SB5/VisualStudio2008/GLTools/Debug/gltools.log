@@ -1,0 +1,32 @@
+﻿生成启动时间为 2015/12/22 20:19:34。
+     1>项目“D:\Tom\opengl\SB5\VisualStudio2008\GLTools\gltools.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Debug\gltools.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D GLEW_STATIC /D _MBCS /Gm /EHsc /RTC1 /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Src\GLTools\src\GLBatch.cpp ..\..\Src\GLTools\src\GLShaderManager.cpp ..\..\Src\GLTools\src\GLTools.cpp ..\..\Src\GLTools\src\GLTriangleBatch.cpp ..\..\Src\GLTools\src\math3d.cpp
+         math3d.cpp
+         GLTriangleBatch.cpp
+         GLTools.cpp
+         GLShaderManager.cpp
+         GLBatch.cpp
+         正在生成代码...
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D GLEW_STATIC /D _MBCS /Gm /EHsc /RTC1 /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\Src\GLTools\src\glew.c
+         glew.c
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1151,5): warning MSB8012: TargetPath(D:\Tom\opengl\SB5\VisualStudio2008\GLTools\Debug\gltools.lib) 与 Library 的 OutputFile 属性值(D:\Tom\opengl\SB5\VisualStudio2008\GLTools\Debug\gltoolsd.lib)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Lib.OutputFile) 中指定的值匹配。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1153,5): warning MSB8012: TargetName(gltools) 与 Library 的 OutputFile 属性值(gltoolsd)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Lib.OutputFile) 中指定的值匹配。
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"D:\Tom\opengl\SB5\VisualStudio2008\GLTools\Debug\gltoolsd.lib" /NOLOGO /NODEFAULTLIB Debug\GLBatch.obj
+         Debug\glew.obj
+         Debug\GLShaderManager.obj
+         Debug\GLTools.obj
+         Debug\GLTriangleBatch.obj
+         Debug\math3d.obj
+         gltools.vcxproj -> D:\Tom\opengl\SB5\VisualStudio2008\GLTools\Debug\gltools.lib
+       FinalizeBuildStatus:
+         正在删除文件“Debug\gltools.unsuccessfulbuild”。
+         正在对“Debug\gltools.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\Tom\opengl\SB5\VisualStudio2008\GLTools\gltools.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.16

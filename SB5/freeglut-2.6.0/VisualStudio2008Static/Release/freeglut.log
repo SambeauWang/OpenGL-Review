@@ -1,0 +1,101 @@
+﻿生成启动时间为 2015/12/22 19:56:42。
+     1>项目“D:\Tom\opengl\SB5\freeglut-2.6.0\VisualStudio2008Static\freeglut.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Release\freeglut.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\include /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D NDEBUG /D FREEGLUT_STATIC /D WIN32 /D _LIB /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\freeglut_callbacks.c ..\src\freeglut_cursor.c ..\src\freeglut_display.c ..\src\freeglut_ext.c ..\src\freeglut_font.c ..\src\freeglut_font_data.c ..\src\freeglut_gamemode.c ..\src\freeglut_geometry.c ..\src\freeglut_glutfont_definitions.c ..\src\freeglut_init.c ..\src\freeglut_input_devices.c ..\src\freeglut_joystick.c ..\src\freeglut_main.c ..\src\freeglut_menu.c ..\src\freeglut_misc.c ..\src\freeglut_overlay.c ..\src\freeglut_spaceball.c ..\src\freeglut_state.c ..\src\freeglut_stroke_mono_roman.c ..\src\freeglut_stroke_roman.c ..\src\freeglut_structure.c ..\src\freeglut_teapot.c ..\src\freeglut_videoresize.c ..\src\freeglut_window.c
+         freeglut_callbacks.c
+         freeglut_cursor.c
+         freeglut_display.c
+         freeglut_ext.c
+         freeglut_font.c
+         freeglut_font_data.c
+         freeglut_gamemode.c
+     1>..\src\freeglut_gamemode.c(394): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(325) : 参见“sscanf”的声明
+     1>..\src\freeglut_gamemode.c(395): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(325) : 参见“sscanf”的声明
+     1>..\src\freeglut_gamemode.c(396): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(325) : 参见“sscanf”的声明
+     1>..\src\freeglut_gamemode.c(397): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(325) : 参见“sscanf”的声明
+     1>..\src\freeglut_gamemode.c(398): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(325) : 参见“sscanf”的声明
+     1>..\src\freeglut_gamemode.c(399): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(325) : 参见“sscanf”的声明
+     1>..\src\freeglut_gamemode.c(400): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(325) : 参见“sscanf”的声明
+         freeglut_geometry.c
+         freeglut_glutfont_definitions.c
+         freeglut_init.c
+     1>..\src\freeglut_init.c(717): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdlib.h(433) : 参见“getenv”的声明
+     1>..\src\freeglut_init.c(722): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(325) : 参见“sscanf”的声明
+     1>..\src\freeglut_init.c(741): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdlib.h(433) : 参见“getenv”的声明
+     1>..\src\freeglut_init.c(685): warning C4101: “sLen”: 未引用的局部变量
+         freeglut_input_devices.c
+     1>..\src\freeglut_input_devices.c(152): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdlib.h(433) : 参见“getenv”的声明
+         freeglut_joystick.c
+     1>..\src\freeglut_joystick.c(1021): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(363) : 参见“_snprintf”的声明
+     1>..\src\freeglut_joystick.c(1031): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(363) : 参见“_snprintf”的声明
+     1>..\src\freeglut_joystick.c(1039): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(363) : 参见“_snprintf”的声明
+     1>..\src\freeglut_joystick.c(1273): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(188) : 参见“strncpy”的声明
+         freeglut_main.c
+         freeglut_menu.c
+         freeglut_misc.c
+         freeglut_overlay.c
+         freeglut_spaceball.c
+         freeglut_state.c
+         freeglut_stroke_mono_roman.c
+         freeglut_stroke_roman.c
+         正在生成代码...
+         正在编译...
+         freeglut_structure.c
+         freeglut_teapot.c
+         freeglut_videoresize.c
+         freeglut_window.c
+         fgSetupPixelFormat(): there is still some work to do here!
+         正在生成代码...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1151,5): warning MSB8012: TargetPath(D:\Tom\opengl\SB5\freeglut-2.6.0\VisualStudio2008Static\Release\freeglut.lib) 与 Library 的 OutputFile 属性值(D:\Tom\opengl\SB5\freeglut-2.6.0\VisualStudio2008Static\Release\freeglut_static.lib)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Lib.OutputFile) 中指定的值匹配。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1153,5): warning MSB8012: TargetName(freeglut) 与 Library 的 OutputFile 属性值(freeglut_static)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Lib.OutputFile) 中指定的值匹配。
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"D:\Tom\opengl\SB5\freeglut-2.6.0\VisualStudio2008Static\Release\freeglut_static.lib" /NOLOGO /NODEFAULTLIB /NODEFAULTLIB:LIBCMT /NODEFAULTLIB:MSVCRT Release\freeglut_callbacks.obj
+         Release\freeglut_cursor.obj
+         Release\freeglut_display.obj
+         Release\freeglut_ext.obj
+         Release\freeglut_font.obj
+         Release\freeglut_font_data.obj
+         Release\freeglut_gamemode.obj
+         Release\freeglut_geometry.obj
+         Release\freeglut_glutfont_definitions.obj
+         Release\freeglut_init.obj
+         Release\freeglut_input_devices.obj
+         Release\freeglut_joystick.obj
+         Release\freeglut_main.obj
+         Release\freeglut_menu.obj
+         Release\freeglut_misc.obj
+         Release\freeglut_overlay.obj
+         Release\freeglut_spaceball.obj
+         Release\freeglut_state.obj
+         Release\freeglut_stroke_mono_roman.obj
+         Release\freeglut_stroke_roman.obj
+         Release\freeglut_structure.obj
+         Release\freeglut_teapot.obj
+         Release\freeglut_videoresize.obj
+         Release\freeglut_window.obj
+         freeglut.vcxproj -> D:\Tom\opengl\SB5\freeglut-2.6.0\VisualStudio2008Static\Release\freeglut.lib
+       FinalizeBuildStatus:
+         正在删除文件“Release\freeglut.unsuccessfulbuild”。
+         正在对“Release\freeglut.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\Tom\opengl\SB5\freeglut-2.6.0\VisualStudio2008Static\freeglut.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.41

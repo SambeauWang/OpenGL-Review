@@ -1,0 +1,96 @@
+Opengl-视图模型变换
+1、模型变换
+	- (void)prepareOpenGL
+	{
+	    glShadeModel(GL_SMOOTH);
+	    
+	    glClearColor(0.0, 0.0, 0.0, 0.0);
+	    glViewport(0, 0, 320, 320);
+	    glMatrixMode(GL_PROJECTION);
+	    glLoadIdentity();
+	    glOrtho(-1.0, 1.0, -1.0, 1.0, 1.0, 5.0);
+	    
+	    glMatrixMode(GL_MODELVIEW);
+	    glLoadIdentity();
+	    glTranslatef(0.3f, 0.2f, 0.0f);
+	    glRotatef(-30.0f, 0.0f, 0.0f, 1.0f);
+	    
+	    glFrontFace(GL_CCW);
+	    glEnable(GL_CULL_FACE);
+	}
+（1）glMatrixMode(GL_MODELVIEW);用于将当前矩阵变换的操作作用到视图模型变换栈上。
+     glLoadIdentity();作用是将当前的矩阵作为单位矩阵，即：[1, 0, 0, 0; 0, 1, 0, 0; 0, 0, 1, 0; 0, 0, 0, 1]。
+                      其实际效果就是：C = I；其中，C表示本矩阵模式的当前矩阵，I表示单位矩阵。
+ (2)glTranslatef(0.3f, 0.2f, 0.0f);是平移变换，函数原型为：
+		 void glTranslated(  GLdouble      x,
+						     GLdouble      y,
+						     GLdouble      z);
+	其中，x表示沿x轴平移多少单位；y表示沿y轴平移多少单位；z表示沿z轴平移多少单位。其对应的平移变换矩阵就是：[1, 0, 0, 0; 0, 1, 0, 0; 0, 0, 1, 0; x, y, z, 1]。那么glTranslatef(0.3f, 0.2f, 0.0f);实际效果就是：C' = T * C = T * I。因为我们刚才调用了glLoadIdentity，因此在调用此函数时的当前矩阵就是I.
+（3）glRotatef(-30.0f, 0.0f, 0.0f, 1.0f);则是将所要绘制的物体的每个顶点坐标绕z轴，顺时针旋转30度。下面给出glRotatef的原型：
+		void glRotated(  GLdouble      angle,
+					     GLdouble      x,
+					     GLdouble      y,
+					     GLdouble      z);
+    如果将旋转变换矩阵表示为R的话，那么这里调用R的效果其实就是：C' = R * C。那么将上面所有的串起来就是：C' = R * (T * I)。如果顶点单纯地只经过视图模型变换，那么对于物体其中一个顶点v而言，变换后的顶点v' = v * (R * (T * I))。我们这里实际上是先对物体做绕z轴旋转，然后再平移。但是调用的时候必须先调平移函数，再调旋转函数。 
+
+2、OpenGL中的矩阵相乘的顺序
+（1）在OpenGL中所有的视图变换，模型变换 都是4×4矩阵，每个后续的glMultiMatrix*(N),或者变换函数,glTranslate*(),glRotate*(),等都是把一个新的4×4矩阵与当前的矩阵M相乘，不同的是：变换函数glTranslate*(),glRotate*()等会根据函数参数构造一个4×4矩阵，也设为N，两种情况产生相同的结果：M×N。注意这里的顺序，后续的矩阵是右乘当前矩阵。
+
+（2）因为在opengl中坐标表示形式是：[x,y,z]T(表示转置)，或者齐次坐标下：[x,y,z,w]T标准化后[x/w,y/w,z/w,1.0]T 这就决定了矩阵也是列优先表示的。将上面的两个矩阵作用于点V,则表示为:M×N×V；满足矩阵相乘的条件：[4×4 ] * [4×1].
+举个例子：
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	glMultMatrixf(M);           //glScale*();
+	glMultMatrixf(N);           //glRotate*()
+	glMultMatrixf(L);           //glTranslate*();
+	glBegin(GL_POINTS);
+	glVertex3f(V);
+	glEnd();
+按照上面的语句，经过变换的顶点是：M×N×L×V， 始终是右乘.
+注意下面的例子：
+	glMatrixMode(L_PROJECTION);
+	glLoadIdentity();
+	gluPerspective(45.0, 1.0, 1.0, 20.);   //创建投影矩阵Mp;
+	glMultMatrixf(Ms);
+产生的结果是：Mp×Ms×V(顶点)；
+但是如果你想要结果是：Ms×Mp×V(顶点)；代码是：
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	glMultMatrixf(Ms);
+	gluPerspective(45.0, 1.0, 1.0, 20.);   //创建投影矩阵Mp;
+理解了矩阵相乘顺序，再做各种变换，实现各种效果的时候就会得心应手。
+
+
+3、glMatrixMode(GL_MODELVIEW)作用
+由于模型和视图的变换都通过矩阵运算来实现，在进行变换前，应先设置当前操作的矩阵为“模型视图矩阵”。设置的方法是以GL_MODELVIEW为参数调用glMatrixMode函数，像这样：
+	glMatrixMode(GL_MODELVIEW);
+该语句指定一个4×4的建模矩阵作为当前矩阵。
+
+通常，我们需要在进行变换前把当前矩阵设置为单位矩阵。把当前矩阵设置为单位矩阵的函数为：
+glLoadIdentity();
+我们在进行矩阵操作时，有可能需要先保存某个矩阵，过一段时间再恢复它。当我们需要保存时，调用glPushMatrix（）函数，它相当于把当前矩阵压入堆栈。当需要恢复最近一次的保存时，调用glPopMatrix（）函数，它相当于从堆栈栈顶弹出一个矩阵为当前矩阵。
+
+
+（1）函数glPushMatrix用于将当前矩阵压入矩阵堆栈（由函数glMatrixMode指定堆栈类型），即：该函数复制栈顶矩阵（比如矩阵A），并放置在栈顶（A‘），这样矩阵堆栈顶部有两个相同的矩阵，栈顶矩阵作为当前矩阵进行后续变换。函数glPushMatrix弹出栈顶矩阵（A‘），下面一个元素变为栈顶（A），即恢复之前的模型视图状态。切记：当前矩阵永远位于堆栈顶部。矩阵堆栈是有深度的，如果压入过多矩阵或者堆栈只有一个矩阵而调用glPopMatrix将导致错误。
+	glMatrixMode(GL_MODEVIEW); // set cur matrix mode  
+	glPushMatrix(); // push cur matrix  
+	    glTranslatef(*);  
+	    glRotatef(*);  
+	    glScalef(*);  
+	    drawObject();  
+	glPopMatrix();
+（2）glPushMatrix和glPopMatrix
+void glPushMatrix(void);
+该函数表示将所有矩阵依次压入堆栈中，顶部矩阵是第二个矩阵的备份；压入的矩阵数不能太多，否则出错。
+另一种理解：复制当前桟顶，并把复制内容再次放到桟顶，以保护桟上之前的内容
+
+void glPopMatrix(void);
+该函数表示弹出堆栈顶部的矩阵，令原第二个矩阵成为顶部矩阵，接受当前操作，故原顶部矩阵被破坏；当堆栈中仅存一个矩阵时，不能进行弹出操作，否则出错。
+
+(3)屏幕坐标点=模型点 * 几何变换栈矩阵(n...1) * 投影变换栈矩阵(n...1)        ---上面的n...1 表示从栈顶到栈底。(左乘和右乘有点问题)
+(4)OpenGL 维护两个栈：投影变换栈，几何变换栈。
+投影变换： glOrtho,gluPerspective--------------------glMatrixMode(GL_PROJECTION); 
+
+几何变换:glTranslatef,glRotatef,glScalef--------glMatrixMode(GL_MODELVIEW); 
+(5)在调用glMatrixMode(GL_MODELVIEW)时，系统会自动将几何变换桟清空并压入单位矩阵，因此不必再调用glLoadIdentity()函数。glMatrixMode(GL_MODELVIEWING或GL_PROJECTION);本命令执行后参数所指矩阵栈就成为当前矩阵栈，以后的矩阵栈操纵命令将作用于它。
+

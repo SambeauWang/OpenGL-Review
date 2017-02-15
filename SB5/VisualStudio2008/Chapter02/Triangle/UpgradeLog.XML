@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Triangle">
+</Property><Property Name="解决方案文件" Value="D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Triangle.sln">
+</Property><Property Name="Date" Value="2015年12月22日">
+</Property><Property Name="Time" Value="20:35:46">
+</Property></Properties><Event ErrorLevel="0" Project="Triangle" Source="Triangle.vcproj" Description="Converting project file 'D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Triangle.vcproj'.">
+</Event><Event ErrorLevel="1" Project="Triangle" Source="Triangle.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="Triangle" Source="Triangle.vcproj" Description="Done converting to new project file 'D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Triangle.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="Triangle" Source="Triangle.vcproj" Description="Converted">
+</Event></UpgradeLog>

@@ -1,0 +1,23 @@
+﻿生成启动时间为 2015/12/22 19:56:46。
+     1>项目“D:\Tom\opengl\SB5\freeglut-2.6.0\VisualStudio2008Static\smooth_opengl3\smooth_opengl3.vcxproj”在节点 8 上(rebuild 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Release\smooth_opengl3.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\include /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D FREEGLUT_STATIC /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\progs\demos\smooth_opengl3\smooth_opengl3.c
+         smooth_opengl3.c
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Tom\opengl\SB5\freeglut-2.6.0\VisualStudio2008Static\Release\smooth_opengl3.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\smooth_opengl3.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Tom\opengl\SB5\freeglut-2.6.0\VisualStudio2008Static\Release\smooth_opengl3.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Tom\opengl\SB5\freeglut-2.6.0\VisualStudio2008Static\Release\smooth_opengl3.lib" /MACHINE:X86 Release\smooth_opengl3.obj
+         "D:\Tom\opengl\SB5\freeglut-2.6.0\VisualStudio2008Static\Release\freeglut_static.lib"
+         正在生成代码
+         已完成代码的生成
+         smooth_opengl3.vcxproj -> D:\Tom\opengl\SB5\freeglut-2.6.0\VisualStudio2008Static\Release\smooth_opengl3.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\Tom\opengl\SB5\freeglut-2.6.0\VisualStudio2008Static\Release\smooth_opengl3.exe;#1" /manifest Release\smooth_opengl3.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“Release\smooth_opengl3.unsuccessfulbuild”。
+         正在对“Release\smooth_opengl3.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\Tom\opengl\SB5\freeglut-2.6.0\VisualStudio2008Static\smooth_opengl3\smooth_opengl3.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.54

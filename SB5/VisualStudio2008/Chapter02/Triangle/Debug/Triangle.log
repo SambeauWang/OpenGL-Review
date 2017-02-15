@@ -1,0 +1,30 @@
+﻿生成启动时间为 2015/12/22 20:38:45。
+     1>项目“D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Triangle.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Debug\Triangle.lastbuildstate”。
+       InitializeBuildStatus:
+         正在对“Debug\Triangle.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\Src\Chapter02\Triangle\Triangle.cpp
+         Triangle.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Debug\Triangle.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Triangle.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Debug\Triangle.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Debug\Triangle.lib" /MACHINE:X86 Debug\Triangle.obj
+         "..\..\..\freeglut-2.6.0\VisualStudio2008Static\Release\freeglut_static.lib"
+         ..\..\GLTools\Release\gltools.lib
+     1>LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+     1>gltools.lib(GLBatch.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“gltools.lib(GLBatch.obj)”或在“D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>gltools.lib(glew.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“gltools.lib(glew.obj)”或在“D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>gltools.lib(GLShaderManager.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“gltools.lib(GLShaderManager.obj)”或在“D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>gltools.lib(GLTools.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“gltools.lib(GLTools.obj)”或在“D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>gltools.lib(GLTriangleBatch.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“gltools.lib(GLTriangleBatch.obj)”或在“D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+         Triangle.vcxproj -> D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Debug\Triangle.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Debug\Triangle.exe.manifest" /manifest Debug\Triangle.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“Debug\Triangle.unsuccessfulbuild”。
+         正在对“Debug\Triangle.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\Tom\opengl\SB5\VisualStudio2008\Chapter02\Triangle\Triangle.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.14
